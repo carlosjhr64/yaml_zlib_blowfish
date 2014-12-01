@@ -1,10 +1,20 @@
 = yaml_zlib_blowfish
 
+{<img src="https://badge.fury.io/rb/gtk3app.svg" alt="Gem Version" />}[http://badge.fury.io/rb/gtk3app]
+
 == DESCRIPTION:
+
+Have you ever wanted to YAML dump, Zlib compress, and Blowfish encrypt your data structures?
+YOU HAVE!? Well...
 
 == SYNOPSIS:
 
-== FEATURES/PROBLEMS:
+   require 'yaml_zlib_blowfish'
+   # ...
+   yzb = YamlZlibBlowfish.new('passphrase')
+   data = yzb.load('./path_to/file.yzb')
+   # ...
+   yzb.dump('./path_to/file.yzb', data)
 
 == INSTALL:
 
