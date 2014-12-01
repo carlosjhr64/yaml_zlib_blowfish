@@ -26,14 +26,10 @@ SUMMARY
 
   s.require_paths = ["lib"]
   s.files = %w(
-.gitignore
-History.txt
 README.rdoc
-TODO.txt
 lib/yaml_zlib_blowfish.rb
 lib/yaml_zlib_blowfish/version.rb
 lib/yaml_zlib_blowfish/yaml_zlib_blowfish.rb
-test/tc_yaml_zlib_blowfish
   )
 
   s.requirements << 'ruby: ruby 2.1.3p242 (2014-09-19 revision 47630) [x86_64-linux]'
