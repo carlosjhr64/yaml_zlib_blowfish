@@ -1,0 +1,7 @@
+^(
+ (\.)|
+ (test\/)|
+ (TODO\.)|
+ (yaml_zlib_blowfish.gemspec)|
+ (History\.)
+)
