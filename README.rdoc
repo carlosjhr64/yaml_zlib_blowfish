@@ -1,6 +1,6 @@
 = yaml_zlib_blowfish
 
-{<img src="https://badge.fury.io/rb/gtk3app.svg" alt="Gem Version" />}[http://badge.fury.io/rb/gtk3app]
+{<img src="https://badge.fury.io/rb/yaml_zlib_blowfish.svg" alt="Gem Version" />}[http://badge.fury.io/rb/yaml_zlib_blowfish]
 
 == DESCRIPTION:
 
