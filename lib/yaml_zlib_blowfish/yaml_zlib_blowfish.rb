@@ -1,5 +1,3 @@
-YAML::ENGINE.yamler = 'psych'
-
 class YamlZlibBlowfish
 
   # cypher_key = yzb.key
