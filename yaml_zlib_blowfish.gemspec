@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
 
   s.name     = 'yaml_zlib_blowfish'
-  s.version  = '0.0.0'
+  s.version  = '0.0.1'
 
   s.homepage = 'https://github.com/carlosjhr64/yaml_zlib_blowfish'
 
   s.author   = 'carlosjhr64'
   s.email    = 'carlosjhr64@gmail.com'
 
-  s.date     = '2014-12-01'
+  s.date     = '2015-01-13'
   s.licenses = ['MIT']
 
   s.description = <<DESCRIPTION
@@ -32,6 +32,6 @@ lib/yaml_zlib_blowfish/version.rb
 lib/yaml_zlib_blowfish/yaml_zlib_blowfish.rb
   )
 
-  s.requirements << 'ruby: ruby 2.1.3p242 (2014-09-19 revision 47630) [x86_64-linux]'
+  s.requirements << 'ruby: ruby 2.2.0p0 (2014-12-25 revision 49005) [x86_64-linux]'
 
 end
