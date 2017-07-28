@@ -2,3 +2,4 @@
 test/error.log
 test/dump.yzb
 yaml_zlib_blowfish-*.*.*.gem
+tmp
