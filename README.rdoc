@@ -16,6 +16,8 @@ YOU HAVE!? Well...
    # ...
    yzb.dump('./path_to/file.yzb', data)
 
+Warning: this version(~1) is incompatible to prior alpha versions(~0).
+
 == INSTALL:
 
   $ sudo gem install yaml_zlib_blowfish

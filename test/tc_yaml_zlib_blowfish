@@ -6,7 +6,6 @@ class TestYamlZlibBlowfish < Test::Unit::TestCase
   def test_iocrypt
     assert_nothing_raised() do
       yzb = YamlZlibBlowfish.new('passphrase')
-      assert_equal Digest::SHA256.digest('passphrase')[0..15], yzb.key
 
       # cipher best thought of as a private method...
       encrypted = yzb.cipher(:encrypt, 'secret')
