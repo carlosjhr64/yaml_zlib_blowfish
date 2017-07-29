@@ -5,3 +5,5 @@ ce188dd9ad1b53a2f6b9641a9eaadcc3  pkg/yaml_zlib_blowfish-0.0.0.gem
 4ad69689ca7128a847567f8dccea15b6  pkg/yaml_zlib_blowfish-0.0.1.gem
 === 0.1.0 / 2017-07-28 13:33:07 -0700
 1aa26677333a6984a82d9914afd754c4  pkg/yaml_zlib_blowfish-0.1.0.gem
+=== 1.0.0 / 2017-07-29 13:30:58 -0700
+82d2ac6e57b3c83f436b1a6fb3befe3f  pkg/yaml_zlib_blowfish-1.0.0.gem
