@@ -1,32 +1,32 @@
-= yaml_zlib_blowfish
+# YamlZlibBlowfish
 
-{<img src="https://badge.fury.io/rb/yaml_zlib_blowfish.svg" alt="Gem Version" />}[http://badge.fury.io/rb/yaml_zlib_blowfish]
+* VERSION 1.0.200124
+* [github](https://github.com/carlosjhr64/yaml_zlib_blowfish)
+* [rubygems](https://rubygems.org/gems/yaml_zlib_blowfish)
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 Have you ever wanted to YAML dump, Zlib compress, and Blowfish encrypt your data structures?
 YOU HAVE!? Well...
 
-== SYNOPSIS:
+## SYNOPSIS:
 
-   require 'yaml_zlib_blowfish'
-   # ...
-   yzb = YamlZlibBlowfish.new('passphrase')
-   data = yzb.load('./path_to/file.yzb')
-   # ...
-   yzb.dump('./path_to/file.yzb', data)
+    require 'yaml_zlib_blowfish'
+    # ...
+    yzb = YamlZlibBlowfish.new('passphrase')
+    data = yzb.load('./path_to/file.yzb')
+    # ...
+    yzb.dump('./path_to/file.yzb', data)
 
-Warning: this version(~1) is incompatible to prior alpha versions(~0).
+## INSTALL:
 
-== INSTALL:
+    $ gem install yaml_zlib_blowfish
 
-  $ sudo gem install yaml_zlib_blowfish
-
-== LICENSE:
+## LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2017 carlosjhr64
+Copyright (c) 2020 carlosjhr64
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
