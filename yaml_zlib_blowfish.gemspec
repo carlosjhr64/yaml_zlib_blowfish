@@ -21,15 +21,12 @@ Have you ever wanted to YAML dump, Zlib compress, and Blowfish encrypt your data
 YOU HAVE!? Well...
 SUMMARY
 
-  s.extra_rdoc_files = ['README.rdoc']
-  s.rdoc_options     = ['--main', 'README.rdoc']
-
   s.require_paths = ['lib']
   s.files = %w(
 README.md
 lib/yaml_zlib_blowfish.rb
   )
 
-  s.requirements << 'ruby: ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]'
+  s.requirements << 'ruby: ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux]'
 
 end
