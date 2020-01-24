@@ -26,7 +26,7 @@ class TestYamlZlibBlowfish < Test::Unit::TestCase
       # dump and load are the main methods...
 
       # We can dump the file
-      dump = './test/dump.yzb'
+      dump = './tmp/dump.yzb'
       File.unlink(dump) if File.exist?(dump)
       refute File.exist?(dump)
       yzb.dump(dump, secret)
