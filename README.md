@@ -1,6 +1,6 @@
 # YamlZlibBlowfish
 
-* VERSION 1.0.200124
+* [VERSION 1.0.200124](https://github.com/carlosjhr64/yaml_zlib_blowfish/releases)
 * [github](https://github.com/carlosjhr64/yaml_zlib_blowfish)
 * [rubygems](https://rubygems.org/gems/yaml_zlib_blowfish)
 
