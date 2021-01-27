@@ -5,20 +5,20 @@ require 'openssl'
 require 'digest/sha2'
 
 class YamlZlibBlowfish
-  VERSION = '1.0.200124'
+  VERSION = '2.0.210127'
 
   # yzb = YamlZlibBlowfish.new(passphrase)
   def initialize(passphrase)
-    key = Digest::SHA256.digest(passphrase)
+    @key    = Digest::SHA256.digest(passphrase)
     @cipher = OpenSSL::Cipher::BF.new(:CBC)
-    @cipher.key_len = key.length
-    @cipher.key = key
   end
 
   # encrypted_string = yzb.cipher(:encrypt, plain_string)
   # plain_string = yzb.cipher(:decrypt, encrypted_string)
   def cipher(mode, data)
-    cipher = @cipher.send(mode)
+    cipher         = @cipher.send(mode)
+    cipher.key_len = @key.length
+    cipher.key     = @key
     cipher.update(data) << cipher.final
   end
 

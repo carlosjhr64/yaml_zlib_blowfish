@@ -1,6 +1,6 @@
 # YamlZlibBlowfish
 
-* [VERSION 1.0.200124](https://github.com/carlosjhr64/yaml_zlib_blowfish/releases)
+* [VERSION 2.0.210127](https://github.com/carlosjhr64/yaml_zlib_blowfish/releases)
 * [github](https://github.com/carlosjhr64/yaml_zlib_blowfish)
 * [rubygems](https://rubygems.org/gems/yaml_zlib_blowfish)
 
@@ -11,12 +11,15 @@ YOU HAVE!? Well...
 
 ## SYNOPSIS:
 
-    require 'yaml_zlib_blowfish'
-    # ...
-    yzb = YamlZlibBlowfish.new('passphrase')
-    data = yzb.load('./path_to/file.yzb')
-    # ...
-    yzb.dump('./path_to/file.yzb', data)
+```ruby
+require 'yaml_zlib_blowfish'
+conf0 = [ 1, 2.0, 'Three', :four, {five: 'Cinco'}]
+yzb = YamlZlibBlowfish.new('Secret PaSspHrase!')
+yzb.dump('./tmp/dump.yzb', conf0)
+conf1 = yzb.load('./tmp/dump.yzb')
+conf1 == conf0 #=> true
+# ...
+```
 
 ## INSTALL:
 
@@ -26,7 +29,7 @@ YOU HAVE!? Well...
 
 (The MIT License)
 
-Copyright (c) 2020 carlosjhr64
+Copyright (c) 2021 CarlosJHR64
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -4,42 +4,40 @@ require 'yaml_zlib_blowfish'
 
 class TestYamlZlibBlowfish < Test::Unit::TestCase
   def test_iocrypt
-    assert_nothing_raised() do
-      yzb = YamlZlibBlowfish.new('passphrase')
+    yzb = YamlZlibBlowfish.new('passphrase')
 
-      # cipher best thought of as a private method...
-      encrypted = yzb.cipher(:encrypt, 'secret')
-      plain = yzb.cipher(:decrypt, encrypted)
-      assert_equal 'secret', plain
-      refute_equal 'secret', encrypted
+    # cipher best thought of as a private method...
+    encrypted = yzb.cipher(:encrypt, 'secret')
+    plain = yzb.cipher(:decrypt, encrypted)
+    assert_equal 'secret', plain
+    refute_equal 'secret', encrypted
 
-      # user might actually want to use encrypt and decrypt, but unlikely.
-      secret = [
-        '-------- Super -------- Secret --------',
-        1,2,3]
-      encrypted = yzb.encrypt(secret)
-      plain = yzb.decrypt(encrypted)
-      assert_equal secret, plain
-      # "encrypted" is no longer an Array, but a compressed encrypted string.
-      assert_equal String, encrypted.class
+    # user might actually want to use encrypt and decrypt, but unlikely.
+    secret = [
+      '-------- Super -------- Secret --------',
+      1,2,3]
+    encrypted = yzb.encrypt(secret)
+    plain = yzb.decrypt(encrypted)
+    assert_equal secret, plain
+    # "encrypted" is no longer an Array, but a compressed encrypted string.
+    assert_equal String, encrypted.class
 
-      # dump and load are the main methods...
+    # dump and load are the main methods...
 
-      # We can dump the file
-      dump = './tmp/dump.yzb'
-      File.unlink(dump) if File.exist?(dump)
-      refute File.exist?(dump)
-      yzb.dump(dump, secret)
-      assert File.exist?(dump)
+    # We can dump the file
+    dump = './tmp/dump.yzb'
+    File.unlink(dump) if File.exist?(dump)
+    refute File.exist?(dump)
+    yzb.dump(dump, secret)
+    assert File.exist?(dump)
 
-      # The file content is "encrypted"
-      digest0 = Digest::MD5.hexdigest encrypted
-      digest1 = `md5sum #{dump}`.strip.split(/\s+/).first
-      assert_equal digest0, digest1
+    # The file content is "encrypted"
+    digest0 = Digest::MD5.hexdigest encrypted
+    digest1 = `md5sum #{dump}`.strip.split(/\s+/).first
+    assert_equal digest0, digest1
 
-      # We can load the file.
-      plain = yzb.load(dump)
-      assert_equal secret, plain
-    end
+    # We can load the file.
+    plain = yzb.load(dump)
+    assert_equal secret, plain
   end
 end
