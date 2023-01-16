@@ -9,6 +9,8 @@ class YamlZlibBlowfish
 
   # yzb = YamlZlibBlowfish.new(passphrase)
   def initialize(passphrase)
+    # Blowfish takes a variable length key from 32 to 448 bits.
+    # Here we create a 256 bit key based on the pass-phrase:
     @key    = Digest::SHA256.digest(passphrase)
     @cipher = OpenSSL::Cipher::BF.new(:CBC)
   end
