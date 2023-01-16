@@ -5,7 +5,7 @@ require 'openssl'
 require 'digest/sha2'
 
 class YamlZlibBlowfish
-  VERSION = '2.0.210127'
+  VERSION = '2.0.230116'
 
   # yzb = YamlZlibBlowfish.new(passphrase)
   def initialize(passphrase)
