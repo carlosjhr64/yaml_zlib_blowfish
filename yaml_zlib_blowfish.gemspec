@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.homepage = 'https://github.com/carlosjhr64/yaml_zlib_blowfish'
 
-  s.author   = 'carlosjhr64'
+  s.author   = 'CarlosJHR64'
   s.email    = 'carlosjhr64@gmail.com'
 
   s.date     = '2023-01-16'

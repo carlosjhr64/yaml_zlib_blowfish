@@ -10,7 +10,6 @@ Have you ever wanted to YAML dump, Zlib compress, and Blowfish encrypt your data
 YOU HAVE!? Well...
 
 ## SYNOPSIS:
-
 ```ruby
 require 'yaml_zlib_blowfish'
 conf0 = [ 1, 2.0, 'Three', :four, {five: 'Cinco'}]
@@ -20,7 +19,6 @@ conf1 = yzb.load('./tmp/dump.yzb')
 conf1 == conf0 #=> true
 # ...
 ```
-
 ## INSTALL:
 
     $ gem install yaml_zlib_blowfish
