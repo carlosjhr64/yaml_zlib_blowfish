@@ -1,6 +1,6 @@
 # YamlZlibBlowfish
 
-* [VERSION 2.0.230116](https://github.com/carlosjhr64/yaml_zlib_blowfish/releases)
+* [VERSION 2.0.250921](https://github.com/carlosjhr64/yaml_zlib_blowfish/releases)
 * [github](https://github.com/carlosjhr64/yaml_zlib_blowfish)
 * [rubygems](https://rubygems.org/gems/yaml_zlib_blowfish)
 
@@ -8,6 +8,8 @@
 
 Have you ever wanted to YAML dump, Zlib compress, and Blowfish encrypt your data structures?
 YOU HAVE!? Well...
+
+BUT BLOWFISH IS DEPRECATED!  .·°՞(¯□¯)՞°·.
 
 ## SYNOPSIS:
 ```ruby
@@ -27,7 +29,7 @@ conf1 == conf0 #=> true
 
 (The MIT License)
 
-Copyright (c) 2023 CarlosJHR64
+Copyright (c) 2025 CarlosJHR64
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

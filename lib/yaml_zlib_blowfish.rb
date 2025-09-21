@@ -1,27 +1,27 @@
 # Standard Libraries
 require 'yaml'
 require 'zlib'
-require 'openssl'
 require 'digest/sha2'
+require 'openssl'
+OpenSSL::Provider.load('legacy')
 
 class YamlZlibBlowfish
-  VERSION = '2.0.230116'
+  VERSION = '2.0.250921'
 
   # yzb = YamlZlibBlowfish.new(passphrase)
   def initialize(passphrase)
     # Blowfish takes a variable length key from 32 to 448 bits.
     # Here we create a 256 bit key based on the pass-phrase:
-    @key    = Digest::SHA256.digest(passphrase)
-    @cipher = OpenSSL::Cipher::BF.new(:CBC)
+    @key = Digest::SHA256.digest(passphrase)
   end
 
   # encrypted_string = yzb.cipher(:encrypt, plain_string)
   # plain_string = yzb.cipher(:decrypt, encrypted_string)
   def cipher(mode, data)
-    cipher         = @cipher.send(mode)
+    cipher         = OpenSSL::Cipher::BF.new(:CBC).send(mode)
     cipher.key_len = @key.length
     cipher.key     = @key
-    cipher.update(data) << cipher.final
+    cipher.update(data) + cipher.final
   end
 
   # plain_structure = yzb.decrypt(encrypted_compressed_dump)
